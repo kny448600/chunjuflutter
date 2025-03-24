@@ -25,8 +25,19 @@ class MyDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.home),
             title: const Text("홈"),
-            onTap: () {,
-              Navigator.pop(context);
+            onTap: () {
+              Navigator.pushNamedAndRemoveUntil(
+                  context, "/", (route) => false
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.home),
+            title: const Text("홈"),
+            onTap: () {
+              Navigator.pushNamed(
+                  context, "setting"
+              );
             },
           )
         ],
