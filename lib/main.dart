@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/button_page.dart';
 import 'package:untitled/flex_file.dart';
 import 'package:untitled/image_page.dart';
 import 'package:untitled/popup_page.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         '/popup': (context) => const PopupPage(),
         '/flex': (context) => const FlexPage(),
         '/image': (context) => const ImagePage(),
+        '/button': (context) => const ButtonPage(),
       },
     );
   }
@@ -43,12 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("안녕하세요"),
+      appBar: AppBar (
+        title: const Text('flexible 예제'),
       ),
-      drawer: const MyDrawer(),
       body: Container(
-        alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
