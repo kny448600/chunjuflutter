@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/flex_file.dart';
+import 'package:untitled/popup_page.dart';
 import 'package:untitled/SETTING_PAGE.dart';
-
 import 'drawer.dart';
 
 void main() {
@@ -20,8 +21,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        '/':(context) => const MyHomePage(),
-        '/setting':(context) => const Settingpage()
+        '/': (context) => const MyHomePage(),
+        '/setting': (context) => const Settingpage(),
+        '/popup': (context) => const PopupPage(),
+        '/flex': (context) => const FlexPage(),
       },
     );
   }
@@ -39,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text("안녕하세요")
+        title: const Text("안녕하세요"),
       ),
       drawer: const MyDrawer(),
       body: Container(
@@ -48,6 +51,22 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width / 2,
+                  height: 200,
+                  color: Colors.blue,
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width / 2,
+                  height: 200,
+                  color: Colors.red,
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width / 2,
@@ -61,24 +80,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 )
               ],
             ),
-            Row(
-              children: [
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: 200,
-                  color: Colors.blue,
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: 200,
-                  color: Colors.red,
-                )
-              ],
-            )
           ],
-         ),
-      )
+        ),
+      ),
     );
   }
 }
-

@@ -1,38 +1,35 @@
 import 'package:flutter/material.dart';
 
-class PopupPage extends StatefulWidget {
-  const PopupPage({super.key});
+class FlexPage extends StatefulWidget {
+  const FlexPage({super.key});
 
   @override
-  State<PopupPage> createState() => _PopupPageState();
+  State<FlexPage> createState() => _FlexPageState();
 }
 
-class _PopupPageState extends State<PopupPage> {
+class _FlexPageState extends State<FlexPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: const Text("팝업 페이지")
+      appBar: AppBar (
+        title: const Text('flexible 예제'),
       ),
-      body: Center(
-        child: TextButton(
-            onPressed: () {
-              showDialog(
-                  context: context,
-                  builder: (BuildContext con) {
-                    return AlertDialog(
-                      title: const Text("Dialog Title"),
-                      content: const Text("Dialog content"),
-                      actions: [
-                        TextButton(
-                            onPressed: () => Navigator.of(context).pop(),
-                            child: const Text("Close"))
-                      ],
-                    );
-                  }
-              );
-            },
-            child: const Text("팝업 버튼")),
+      body: Row(
+        children: [
+          Flexible(
+              flex: 1,
+              child: Container(
+                color: Colors.lightBlue,
+                height: 200,
+              )
+          ),
+          Flexible(
+              flex: 2,
+              child: Container(
+                color: Colors.yellow,
+              )
+          )
+        ],
       ),
     );
   }
