@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/flex_file.dart';
+import 'package:untitled/image_page.dart';
 import 'package:untitled/popup_page.dart';
 import 'package:untitled/SETTING_PAGE.dart';
 import 'drawer.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/setting': (context) => const Settingpage(),
         '/popup': (context) => const PopupPage(),
         '/flex': (context) => const FlexPage(),
+        '/image': (context) => const ImagePage(),
       },
     );
   }
