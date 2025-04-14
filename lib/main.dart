@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:untitled/button_page.dart';
 import 'package:untitled/flex_file.dart';
 import 'package:untitled/image_page.dart';
-import 'package:untitled/layout_page.dart';
+import 'package:untitled/list_page.dart';
 import 'package:untitled/popup_page.dart';
+import 'package:untitled/todo-page.dart';
+
 
 import 'drawer.dart';
 import 'input_page.dart';
@@ -25,17 +27,18 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        '/': (context) => const LayoutPage(),
+        '/': (context) => const TodoPage(),
         '/popup': (context) => const PopupPage(),
         '/flex': (context) => const FlexPage(),
         '/image': (context) => const ImagePage(),
         '/button': (context) => const ButtonPage(),
         '/input': (context) => const InputPage(),
+        '/list': (context) => const ListPage(),
+        '/to-do': (context) => const TodoPage(),
       },
     );
   }
 }
-
 
 
 

@@ -83,6 +83,24 @@ class MyDrawer extends StatelessWidget {
                   context, "/input"
               );
             },
+          ),
+          ListTile(
+            leading: const Icon(Icons.list),
+            title: const Text("list 예제"),
+            onTap: () {
+              Navigator.pushNamed(
+                  context, "/list"
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.list),
+            title: const Text("To Do 앱"),
+            onTap: () {
+              Navigator.pushNamed(
+                  context, "/to-do"
+              );
+            },
           )
         ],
       ),
