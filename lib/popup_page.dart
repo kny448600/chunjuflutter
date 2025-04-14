@@ -16,24 +16,24 @@ class _PopupPageState extends State<PopupPage> {
       ),
       body: Center(
         child: TextButton(
-          onPressed: () {
-            showDialog(
-                context: context,
-                builder: (BuildContext con) {
-                  return AlertDialog(
-                    title: const Text("Dialog Title"),
-                    content: const Text("Dialog content"),
-                    actions: [
-                      TextButton(
-                          onPressed: () => Navigator.of(context).pop(),
-                          child: const Text("Close")
-                      )
-                    ],
-                  );
-                }
-            );
-          },
-          child: const Text("팝업 버튼"),
+            onPressed: () {
+              showDialog(
+                  context: context,
+                  builder: (BuildContext con) {
+                    return AlertDialog(
+                      title: const Text("Dialog Title"),
+                      content: const Text("Dialog content"),
+                      actions: [
+                        TextButton(
+                            onPressed: () => Navigator.of(context).pop(),
+                            child: const Text("Close")
+                        )
+                      ],
+                    );
+                  }
+              );
+            },
+            child: const Text("팝업 버튼")
         ),
       ),
     );

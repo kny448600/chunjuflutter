@@ -15,28 +15,28 @@ class _ButtonPageState extends State<ButtonPage> {
         title: const Text("버튼 페이지"),
       ),
       body: Container(
-          child: Column(
-            children: [
-              Center(
-                  child: ElevatedButton(
-                    onPressed: ()=> print("Elevated Button"),
-                    child: const Text("Elevated버튼"),
-                  )
+        child: Column(
+          children: [
+            Center(
+              child: ElevatedButton(
+                  onPressed: ()=> print("Elevated Button"),
+                  child: const Text("Elevated버튼")
               ),
-              Center(
-                  child: ElevatedButton(
-                    onPressed: ()=> print("Text Button"),
-                    child: const Text("Text버튼"),
-                  )
+            ),
+            Center(
+              child: TextButton(
+                  onPressed: ()=> print("Text Button"),
+                  child: const Text("Text버튼")
               ),
-              Center(
-                  child: ElevatedButton(
-                    onPressed: ()=> print("outline Button"),
-                    child: const Text("outline버튼"),
-                  )
-              )
-            ],
-          )
+            ),
+            Center(
+              child: OutlinedButton(
+                  onPressed: ()=> print("outline Button"),
+                  child: const Text("outline버튼")
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

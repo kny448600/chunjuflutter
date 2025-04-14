@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/button_page.dart';
-import 'package:untitled/flex_file.dart';
-import 'package:untitled/image_page.dart';
-import 'package:untitled/input_page.dart';
-import 'package:untitled/popup_page.dart';
-import 'package:untitled/SETTING_PAGE.dart';
+import 'package:hello/button_page.dart';
+import 'package:hello/flex_page.dart';
+import 'package:hello/image_page.dart';
+import 'package:hello/layout_page.dart';
+import 'package:hello/popup_page.dart';
+import 'package:/SETTING_PAGE.dart';
 
-import 'layout_page.dart';
-
+import 'drawer.dart';
+import 'input_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
 
   // This widget is the root of your application.
   @override
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         '/': (context) => const LayoutPage(),
-        '/setting': (context) => const Settingpage(),
+        '/setting': (context) => const SettingPage(),
         '/popup': (context) => const PopupPage(),
         '/flex': (context) => const FlexPage(),
         '/image': (context) => const ImagePage(),
@@ -38,4 +37,10 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
 

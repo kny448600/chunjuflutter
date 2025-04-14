@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'drawer.dart';
+import 'package:untitled/drawer.dart';
+
 
 class LayoutPage extends StatefulWidget {
   const LayoutPage({super.key});
@@ -14,7 +15,7 @@ class _LayoutPageState extends State<LayoutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("안녕하세요"),
+          title: const Text("안녕하세요")
       ),
       drawer: const MyDrawer(),
       body: Container(
@@ -51,7 +52,7 @@ class _LayoutPageState extends State<LayoutPage> {
                   color: Colors.yellow,
                 )
               ],
-            ),
+            )
           ],
         ),
       ),

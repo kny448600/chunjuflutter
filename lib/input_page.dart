@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 class InputPage extends StatefulWidget {
@@ -6,7 +7,6 @@ class InputPage extends StatefulWidget {
   @override
   State<InputPage> createState() => _InputPageState();
 }
-
 
 class _InputPageState extends State<InputPage> {
   final TextEditingController _controller = TextEditingController();
@@ -23,18 +23,19 @@ class _InputPageState extends State<InputPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextField(
+              controller: _controller,
               decoration: const InputDecoration(
                   labelText: "이름을 입력하세요",
                   border: OutlineInputBorder()
               ),
             ),
             ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    _message = "${_controller.text}님, 반가워요!";
-                  });
-                },
-                child: const Text("확인")
+              onPressed: () {
+                setState(() {
+                  _message = "${_controller.text}님, 반가워요!";
+                });
+              },
+              child: const Text("확인"),
             ),
             Text(
               _message,
