@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/SETTING_PAGE.dart';
 import 'package:untitled/button_page.dart';
 import 'package:untitled/flex_file.dart';
 import 'package:untitled/image_page.dart';
@@ -27,7 +26,6 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         '/': (context) => const LayoutPage(),
-        '/setting': (context) => const SettingPage(),
         '/popup': (context) => const PopupPage(),
         '/flex': (context) => const FlexPage(),
         '/image': (context) => const ImagePage(),
