@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hello/button_page.dart';
-import 'package:hello/flex_page.dart';
-import 'package:hello/image_page.dart';
-import 'package:hello/layout_page.dart';
-import 'package:hello/popup_page.dart';
-import 'package:/SETTING_PAGE.dart';
+import 'package:untitled/SETTING_PAGE.dart';
+import 'package:untitled/button_page.dart';
+import 'package:untitled/flex_file.dart';
+import 'package:untitled/image_page.dart';
+import 'package:untitled/layout_page.dart';
+import 'package:untitled/popup_page.dart';
 
 import 'drawer.dart';
 import 'input_page.dart';
